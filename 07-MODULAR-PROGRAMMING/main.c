@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "controller.h"
 
 // TODO : Enhance your code with functions
 
-int real_damage(int damages, int diff)
-{
-  return damages *= diff;
-}
+int real_damage(int damages, int diff);
+
 int main(int argc, char *argv[])
 {
   int nb_lifes = 5, level = 1, difficulty = 0, damages = 1, result = 0;
@@ -31,4 +30,9 @@ int main(int argc, char *argv[])
   printf("You loose\n");
 
   return 0;
+}
+
+int real_damage(int damages, int diff)
+{
+  return damages *= diff;
 }
