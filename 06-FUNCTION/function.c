@@ -4,6 +4,10 @@
 
 // TODO : Enhance your code with functions
 
+int real_damage(int damages, int diff)
+{
+  return damages *= diff;
+}
 int main(int argc, char *argv[])
 {
   int nb_lifes = 5, level = 1, difficulty = 0, damages = 1, result = 0;
@@ -16,7 +20,7 @@ int main(int argc, char *argv[])
   } while (difficulty > 5 || difficulty == 0);
 
 
-  damages *= difficulty;
+  damages = real_damage(damages, difficulty);
   result = nb_lifes - damages;
 
   printf("You choose difficulty %d take %d damages \n", difficulty, damages);
