@@ -2,15 +2,19 @@
 #include <stdlib.h>
 #include <math.h>
 
-// TODO : Enhance your code with condition
+// TODO : Enhance your code with loop
 
 int main(int argc, char *argv[])
 {
   int nb_lifes = 5, level = 1, difficulty = 0, damages = 1, result = 0;
 
   printf("You have %d lifes and you are level %d\n", nb_lifes, level);
-  printf("Choose a difficulty 1-5 :\n");
-  scanf("%d", &difficulty);
+  do
+  {
+    printf("Choose a difficulty 1-5 :\n");
+    scanf("%d", &difficulty);
+  } while (difficulty > 5 || difficulty == 0);
+
 
   damages *= difficulty;
   result = nb_lifes - damages;
